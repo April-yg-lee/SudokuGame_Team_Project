@@ -66,13 +66,11 @@
 .select1to5 li, .select6to9 li{
     background-color: darkred;
     border-radius: 100px;
-    color: whitesmoke;
-  
+    color: whitesmoke; 
     font-size: 50px;
     font-weight: 800;
     list-style: none;
     padding: 5%;
-
     width: 80px;
     height: 80px;
     display: flex;
