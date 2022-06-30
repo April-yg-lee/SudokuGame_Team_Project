@@ -1,8 +1,7 @@
-
 * {
     margin: 0;
     padding: 0;
-} 
+}
 
 
 
@@ -15,8 +14,8 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    justify-content: end;  
-    padding-bottom: 3%;  
+    justify-content: end;
+    padding-bottom: 3%;
 }
 
 #home a {
@@ -44,7 +43,7 @@
     column-gap: 3%;
 }
 
-.num-selection{
+.num-selection {
     height: 90vh;
     width: 32vh;
     display: flex;
@@ -53,7 +52,7 @@
 }
 
 
-.select1to5, .select6to9{
+.select1to5, .select6to9 {
     display: flex;
     flex-direction: column;
     height: 90%;
@@ -63,10 +62,10 @@
     row-gap: 5%;
 }
 
-.select1to5 li, .select6to9 li{
+.select1to5 li, .select6to9 li {
     background-color: darkred;
     border-radius: 100px;
-    color: whitesmoke; 
+    color: whitesmoke;
     font-size: 50px;
     font-weight: 800;
     list-style: none;
@@ -79,7 +78,7 @@
 }
 
 
-.container{
+.container {
     border: 15px solid darkred;
     border-radius: 50px;
     height: 90vh;
@@ -91,43 +90,43 @@
     font-size: 50px;
 }
 
-.box1to3, .box4to6, .box7to9{
+.box1to3, .box4to6, .box7to9 {
     height: 33.3%;
     width: 100%;
     display: flex;
 }
 
-.box4to6{
+.box4to6 {
     border-top: 5px solid black;
     border-bottom: 5px solid black;
 }
 
 
-.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9{
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9 {
     height: 100%;
     width: 33.3%;
     display: flex;
     flex-direction: column;
 }
 
-.box2, .box5, .box8{
+.box2, .box5, .box8 {
     border-left: 5px solid black;
     border-right: 5px solid black;
 }
 
 
-.n1to3, .n4to6, .n7to9{
+.n1to3, .n4to6, .n7to9 {
     height: 33.3%;
     width: 100%;
     display: flex;
 }
 
-.n4to6{
+.n4to6 {
     border-top: 3px solid lightgray;
     border-bottom: 3px solid lightgray;
 }
 
-.n1, .n2, .n3, .n4, .n5, .n6, .n7, .n8, .n9{
+.n1, .n2, .n3, .n4, .n5, .n6, .n7, .n8, .n9 {
     height: 100%;
     width: 33.3%;
     display: flex;
@@ -136,7 +135,42 @@
     justify-content: center;
 }
 
-.n2, .n5, .n8{
+.n2, .n5, .n8 {
     border-left: 3px solid lightgray;
     border-right: 3px solid lightgray;
+}
+
+
+/* COMPLETED EASY */
+
+#comp-easy {
+    background: url("/img/gameback.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 5%;
+
+}
+
+
+
+
+/* COMPLETED HARD */
+
+#comp-hard {
+    background: url("/img/gameback.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 5%;
+    column-gap: 3%;
 }
