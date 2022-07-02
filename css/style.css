@@ -43,6 +43,28 @@
     column-gap: 3%;
 }
 
+/* TIMER SECTION */
+
+.timer {
+    width: 200px;
+    color: black;
+    font-size: 35px;
+    padding: 15px;
+    background: #F5F5F5;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #c8c9cc,
+        -2px -2px 5px #c8c9cc;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Changa One', cursive;
+}
+
+.timer p {
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
 .num-selection {
     height: 90vh;
     width: 32vh;
@@ -158,21 +180,18 @@
 
 .comp-box {
     padding-top: 30px;
-    width: 650px;
+    width: 680px;
     height: 500px;
     border-radius: 30px;
-    background: rgba(255, 223, 89, 0.7);
-    box-shadow: 8px 8px 20px #c8c9cc,
-        -8px -8px 20px #c8c9cc;
+    background: rgba(255, 223, 89, 0.75);
+    box-shadow: 10px 10px 20px #c8c9cc,
+        -10px -10px 20px #c8c9cc;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .comp-box article {
-    width: 580px;
-    height: 463px;
-    /* border: 3px solid #F5F5F5; */
     border-radius: 14px;
     display: flex;
     flex-direction: column;
@@ -181,9 +200,9 @@
 }
 
 .comp-box h2 {
-    padding-top: 40px;
+    padding-top: 45px;
     text-align: center;
-    font-size: 60px;
+    font-size: 65px;
     letter-spacing: 2px;
     color: #7B40E7;
     text-shadow: 5px 5px 3px #F5F5F5;
@@ -201,34 +220,49 @@
     width: 350px;
     background-color: #F5F5F5;
     border-radius: 50px;
-    padding: 15px 10px;
+    padding: 20px 15px;
     text-align: center;
 }
 
 .comp-box .record p {
     font-size: 40px;
     color: #7B40E7;
+    letter-spacing: 1.5px;
     text-shadow: 5px 5px 5px #c8c9cc;
     font-family: 'Changa One', cursive;
 }
 
 .comp-box .button {
-    width: 350px;
     background-color: rgba(123, 64, 231, 0.8);
     border-radius: 50px;
-    padding: 15px 10px;
     text-align: center;
     box-shadow: inset 5px 5px 30px #562da2,
         inset -5px -5px 30px #a053ff;
+    display: flex;
+    flex-direction: column;
 }
 
-.comp-box .button p {
+.comp-box .button a {
     font-size: 40px;
     letter-spacing: 1.5px;
     color: #FFDF59;
     text-shadow: 5px 5px 5px #666;
     font-family: 'Changa One', cursive;
+    padding: 20px 15px;
+    text-decoration: none;
+
 }
+
+.comp-box .button a:hover {
+    background-color: rgba(180, 2, 8, 0.6);
+    box-shadow: inset 5px 5px 30px #666,
+        inset -5px -5px 30px #b50508;
+    text-shadow: 3px 3px 3px #777;
+    color: #F5F5F5;
+    border-radius: 50px;
+    transition: 1s;
+}
+
 
 /* COMPLETED HARD */
 
@@ -243,4 +277,8 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+#comp-hard h2 {
+    font-size: 63px;
 }

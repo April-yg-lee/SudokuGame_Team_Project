@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <title>SUDOKU GAME</title>
 </head>
 
@@ -17,19 +19,9 @@
     <!-- HOME SECTION -->
     <div id="home">
 
-      <!-- <h1>Five Guys</h1> -->
-      <!-- <ul>
-        <li>April</li>
-        <li>Emma</li>
-        <li>linwen</li>
-        <li>Matheus</li>
-        <li>Mamiko</li>
-      </ul> -->
-
       <a href="#sudoku"></a>
 
       <!-- <span>April / Emma / Linwen / Matheus / Mamikp</span> -->
-
 
     </div>
     <!-- HOME SECTION END -->
@@ -37,7 +29,11 @@
     <!-- SUDOKU GAME -->
     <div id="sudoku">
 
-      <!-- <h1>Five Guys</h1> -->
+      <span class="timer">
+        <i class="fas fa-stopwatch"></i>
+        <p>0:10</p>
+      </span>
+
       <ul class="num-selection">
         <div class="select1to5">
           <li>1</li>
@@ -237,7 +233,9 @@
               <p>Record : <span>20:05</span></p>
             </div>
             <div class="button">
-              <p>TRY HARD Ver</p>
+              <a href="#home">
+                TRY HARD Ver
+              </a>
             </div>
           </aside>
         </article>
@@ -247,7 +245,21 @@
 
     <!-- COMPLETED HARD SECTION -->
     <div id="comp-hard">
-
+      <section class="comp-box">
+        <article>
+          <h2>CONGRATULATION!</h2>
+          <aside>
+            <div class="record">
+              <p>Record : <span>20:05</span></p>
+            </div>
+            <div class="button">
+              <a href="#home">
+                TRY AGAIN
+              </a>
+            </div>
+          </aside>
+        </article>
+      </section>
     </div>
     <!-- COMPLETED HARD SECTION END -->
 
