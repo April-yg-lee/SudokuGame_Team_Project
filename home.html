@@ -6,11 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Mamiko part -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <!-- Mamiko part -->
+
+
+  <!-- Linwen part -->
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@500;700&family=Comfortaa:wght@500&family=Courgette&family=Kalam&family=Lavishly+Yours&family=Parisienne&family=Roboto+Mono&family=Sacramento&family=Ultra&family=Viga&display=swap" rel="stylesheet"></head>
+  <script src="./jquery-3.6.0.js"></script>
+  <!-- Linwen part -->      
   <title>SUDOKU GAME</title>
 </head>
 
@@ -19,12 +28,37 @@
     <!-- HOME SECTION -->
     <div id="home">
 
-      <a href="#sudoku"></a>
+      <video autoplay loop muted class="v-header">
+        <source src="./img/home.mp4" type="video/mp4">
+      </video>
 
-      <!-- <span>April / Emma / Linwen / Matheus / Mamikp</span> -->
+      <div id="playbtn">
+        <a id = "gotolevel" href="#" onclick = "showlevel();"></a>
+      </div>
+    
+      <div id="member">
+        <span>April / Emma / Linwen <br> Matheus / Mamiko</span>
+      </div>
 
     </div>
     <!-- HOME SECTION END -->
+
+
+    <!-- Select Level -->
+    <div id="level">
+      <div class="level-video">
+        <video autoplay loop muted class="v-header">
+          <source src="./img/logowithbg_square.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <a id = "gotoeasy" class="easy" href="#" onclick = "showsudoku();"></a>
+      <a id = "gotodifficult" class="difficult" href="#" onclick = "showsudoku();"></a>
+    
+    </div>
+
+    <!-- Select Level END -->
+
 
     <!-- SUDOKU GAME -->
     <div id="sudoku">
@@ -47,6 +81,8 @@
           <li>7</li>
           <li>8</li>
           <li>9</li>
+          <li id="noshow">00</li>
+
         </div>
       </ul>
 
@@ -265,6 +301,21 @@
 
   </main>
 </body>
+
+
+<script>
+
+document.querySelector('video').playbackRate = 0.5;
+
+function showlevel(event){
+  $('#home').fadeOut("slow");
+  $('#level').fadeIn("slow");
+}
+
+function showsudoku(event){
+  $('#level').fadeOut("slow");
+  $('#sudoku').fadeIn("slow");
+}
 
 
 </script>
