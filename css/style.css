@@ -4,46 +4,135 @@
 }
 
 
-
+/************************* Home page *******************************/
 #home {
-    background: url("/img/homebtn.png");
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    justify-content: end;
-    padding-bottom: 3%;
+    justify-content: end;  
+}
+
+#home .v-header{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 1;
+}
+
+#playbtn{
+    padding-bottom: 10%;
+    background: url("/img/play-btn.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    z-index: 1;
+    width: 40%;
+    height: 30%;
 }
 
 #home a {
-    width: 25%;
-    height: 15vh;
-    padding: 2%;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
 }
 
+#member{
+    position: absolute;
+    z-index: 1;
+    color: #7B40E7;
+    font-family: 'Lavishly Yours', cursive;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    font-size: 20px;
+}
 
-#sudoku {
-    background: url("/img/gameback.png");
-    background-position: top;
+#member span{
+    padding: 3%;
+}
+
+/************************* Level page *******************************/
+
+#level{
+    background: url("/img/bg.png");
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    position: relative;
     height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;  
+}
+
+#level .level-video{
+    width: 100%;
+    display: flex;
+    padding-left: 10%;
+}
+
+#level .v-header{
+    position: absolute;
+    display: flex;
+    width: 17%;
+    object-fit: fill;
+    z-index: 1;
+    border-radius: 100%;
+}
+
+
+.easy{
+    background: url("/img/easy-btn.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 50%;
+    height: 30%;
+    font-size: 50px;
+    padding-top: 10%;
+}
+
+.difficult{
+    background: url("/img/diff-btn.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 60%;
+    height: 35%;
+    font-size: 50px;
+}
+
+
+/************************* Sudoku page *******************************/
+
+#sudoku {
+    background: url("/img/bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    width: 100%;
 
     display: flex;
     align-items: center;
-    justify-content: end;
-    padding-right: 5%;
+    justify-content: center;
     column-gap: 3%;
-}
 
-/* TIMER SECTION */
+}
+/************************* Sudoku page - timer *******************************/
 
 .timer {
     width: 200px;
@@ -65,51 +154,69 @@
     letter-spacing: 3px;
 }
 
+
+/************************* Sudoku page - num-selection *******************************/
+
 .num-selection {
-    height: 90vh;
-    width: 32vh;
+    height: 80%;
+    width: 20%;
     display: flex;
-    justify-content: space-evenly;
+    column-gap: 0%;
     align-items: center;
+    font-family: 'Architects Daughter', cursive;
 }
 
 
 .select1to5, .select6to9 {
+    height: 100%;
+    width: 50%;
+
     display: flex;
     flex-direction: column;
-    height: 90%;
-    width: 50%;
-    justify-content: top;
     align-items: center;
+    justify-content: space-evenly;
     row-gap: 5%;
 }
 
 .select1to5 li, .select6to9 li {
-    background-color: darkred;
-    border-radius: 100px;
-    color: whitesmoke;
+    background-color: #7B40E7;
+    border-radius: 100%;
+    color: #FFDF59;
+
+    list-style: none;
+    width: 70%;
+    height: 80%;
     font-size: 50px;
     font-weight: 800;
-    list-style: none;
-    padding: 5%;
-    width: 80px;
-    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    box-shadow: 8px 8px 20px #c8c9cc,
+    -8px -8px 20px #c8c9cc;
+
 }
 
+#noshow{
+    /* display: none; */
+    opacity: 0;
+}
+
+/************************* Sudoku page - game *******************************/
 
 .container {
-    border: 15px solid darkred;
+    border: 15px solid #7B40E7;
     border-radius: 50px;
-    height: 90vh;
-    width: 90vh;
+    height: 80%;
+    width: 50%;
 
     display: flex;
     flex-direction: column;
     background-color: whitesmoke;
-    font-size: 50px;
+    font-size: 40px;
+    font-family: 'Viga', sans-serif;
+    box-shadow: 8px 8px 20px #c8c9cc,
+    -8px -8px 20px #c8c9cc;
 }
 
 .box1to3, .box4to6, .box7to9 {
@@ -119,8 +226,8 @@
 }
 
 .box4to6 {
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
+    border-top: 5px solid #7B40E7;
+    border-bottom: 5px solid #7B40E7;
 }
 
 
@@ -132,8 +239,8 @@
 }
 
 .box2, .box5, .box8 {
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    border-left: 5px solid #7B40E7;
+    border-right: 5px solid #7B40E7;
 }
 
 
@@ -163,6 +270,9 @@
 }
 
 
+
+/************************* Completed page *******************************/
+
 /* COMPLETED EASY */
 
 #comp-easy {
@@ -180,18 +290,21 @@
 
 .comp-box {
     padding-top: 30px;
-    width: 680px;
+    width: 650px;
     height: 500px;
     border-radius: 30px;
-    background: rgba(255, 223, 89, 0.75);
-    box-shadow: 10px 10px 20px #c8c9cc,
-        -10px -10px 20px #c8c9cc;
+    background: rgba(255, 223, 89, 0.7);
+    box-shadow: 8px 8px 20px #c8c9cc,
+        -8px -8px 20px #c8c9cc;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .comp-box article {
+    width: 580px;
+    height: 463px;
+    /* border: 3px solid #F5F5F5; */
     border-radius: 14px;
     display: flex;
     flex-direction: column;
@@ -200,9 +313,9 @@
 }
 
 .comp-box h2 {
-    padding-top: 45px;
+    padding-top: 40px;
     text-align: center;
-    font-size: 65px;
+    font-size: 60px;
     letter-spacing: 2px;
     color: #7B40E7;
     text-shadow: 5px 5px 3px #F5F5F5;
@@ -220,49 +333,34 @@
     width: 350px;
     background-color: #F5F5F5;
     border-radius: 50px;
-    padding: 20px 15px;
+    padding: 15px 10px;
     text-align: center;
 }
 
 .comp-box .record p {
     font-size: 40px;
     color: #7B40E7;
-    letter-spacing: 1.5px;
     text-shadow: 5px 5px 5px #c8c9cc;
     font-family: 'Changa One', cursive;
 }
 
 .comp-box .button {
+    width: 350px;
     background-color: rgba(123, 64, 231, 0.8);
     border-radius: 50px;
+    padding: 15px 10px;
     text-align: center;
     box-shadow: inset 5px 5px 30px #562da2,
         inset -5px -5px 30px #a053ff;
-    display: flex;
-    flex-direction: column;
 }
 
-.comp-box .button a {
+.comp-box .button p {
     font-size: 40px;
     letter-spacing: 1.5px;
     color: #FFDF59;
     text-shadow: 5px 5px 5px #666;
     font-family: 'Changa One', cursive;
-    padding: 20px 15px;
-    text-decoration: none;
-
 }
-
-.comp-box .button a:hover {
-    background-color: rgba(180, 2, 8, 0.6);
-    box-shadow: inset 5px 5px 30px #666,
-        inset -5px -5px 30px #b50508;
-    text-shadow: 3px 3px 3px #777;
-    color: #F5F5F5;
-    border-radius: 50px;
-    transition: 1s;
-}
-
 
 /* COMPLETED HARD */
 
@@ -277,8 +375,4 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-}
-
-#comp-hard h2 {
-    font-size: 63px;
 }
