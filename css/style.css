@@ -167,7 +167,7 @@
 }
 
 
-.select1to5, .select6to9 {
+.select1to9 {
     height: 100%;
     width: 50%;
 
@@ -178,7 +178,7 @@
     row-gap: 5%;
 }
 
-.select1to5 li, .select6to9 li {
+.select1to9 li {
     background-color: #7B40E7;
     border-radius: 100%;
     color: #FFDF59;
