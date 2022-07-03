@@ -101,7 +101,6 @@ let gameTypeAnswer = 'easy-1-answer';
 
 
 
-
 // Event for When you click the input box 
 $(document).on("click", ".container div div div div", function () {
   let selectedBox = $(".container div div div div");
