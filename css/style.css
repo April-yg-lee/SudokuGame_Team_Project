@@ -403,6 +403,11 @@
 /* cell color change when user input wrong value */
 .wrong {
     background-color: #FFDF59;
+
+    background: url("/img/wrongbtn.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 
