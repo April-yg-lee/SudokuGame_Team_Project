@@ -17,13 +17,17 @@
 
 
   <!-- Linwen part -->
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@500;700&family=Comfortaa:wght@500&family=Courgette&family=Kalam&family=Lavishly+Yours&family=Parisienne&family=Roboto+Mono&family=Sacramento&family=Ultra&family=Viga&display=swap" rel="stylesheet"></head>
-  <script src="./jquery-3.6.0.js"></script>
-  
-  <!-- Linwen part -->      
-  
-  <script src="./april.js" defer></script>
-  <title>SUDOKU GAME</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@500;700&family=Comfortaa:wght@500&family=Courgette&family=Kalam&family=Lavishly+Yours&family=Parisienne&family=Roboto+Mono&family=Sacramento&family=Ultra&family=Viga&display=swap"
+    rel="stylesheet">
+</head>
+<script src="./jquery-3.6.0.js"></script>
+
+<!-- Linwen part -->
+
+<script src="./Emma.js" defer></script>
+<script src="./april.js" defer></script>
+<title>SUDOKU GAME</title>
 </head>
 
 <body>
@@ -36,9 +40,9 @@
       </video>
 
       <div id="playbtn">
-        <a id = "gotolevel" href="#" onclick = "showlevel();"></a>
+        <a id="gotolevel" href="#" onclick="showlevel();"></a>
       </div>
-    
+
       <div id="member">
         <span>April / Emma / Linwen <br> Matheus / Mamiko</span>
       </div>
@@ -54,10 +58,10 @@
           <source src="./img/logowithbg_square.mp4" type="video/mp4">
         </video>
       </div>
-      
-      <a id = "gotoeasy" class="easy" href="#" onclick = "showsudoku();"></a>
-      <a id = "gotodifficult" class="difficult" href="#" onclick = "showsudoku();"></a>
-    
+
+      <a id="gotoeasy" class="easy" href="#" onclick="showsudoku();"></a>
+      <a id="gotodifficult" class="difficult" href="#" onclick="showsudoku();"></a>
+
     </div>
 
     <!-- Select Level END -->
@@ -90,176 +94,6 @@
       </ul>
 
       <div class="container">
-        <div class="box1to3">
-          <div class="box1">
-            <div class="n1to3">
-              <div class="n1" id="n1-1">1</div>
-              <div class="n2" id="n1-2">2</div>
-              <div class="n3" id="n1-3">3</div>
-            </div>
-            <div class="n4to6">
-              <div class="n4" id="n1-4">4</div>
-              <div class="n5" id="n1-5">5</div>
-              <div class="n6" id="n1-6">6</div>
-            </div>
-            <div class="n7to9">
-              <div class="n7" id="n1-7">7</div>
-              <div class="n8" id="n1-8">8</div>
-              <div class="n9" id="n1-9">9</div>
-            </div>
-          </div>
-
-          <div class="box2">
-            <div class="n1to3">
-              <div class="n1" id="n2-1">1</div>
-              <div class="n2" id="n2-2">2</div>
-              <div class="n3" id="n2-3">3</div>
-            </div>
-            <div class="n4to6">
-              <div class="n4" id="n2-4">4</div>
-              <div class="n5" id="n2-5">5</div>
-              <div class="n6" id="n2-6">6</div>
-            </div>
-            <div class="n7to9">
-              <div class="n7" id="n2-7">7</div>
-              <div class="n8" id="n2-8">8</div>
-              <div class="n9" id="n2-9">9</div>
-            </div>
-          </div>
-
-          <div class="box3">
-            <div class="n1to3">
-              <div class="n1" id="n3-1">1</div>
-              <div class="n2" id="n3-2">2</div>
-              <div class="n3" id="n3-3">3</div>
-            </div>
-            <div class="n4to6">
-              <div class="n4" id="n3-4">4</div>
-              <div class="n5" id="n3-5">5</div>
-              <div class="n6" id="n3-6">6</div>
-            </div>
-            <div class="n7to9">
-              <div class="n7" id="n3-7">7</div>
-              <div class="n8" id="n3-8">8</div>
-              <div class="n9" id="n3-9">9</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="box4to6">
-          <div class="box4">
-            <div class="n1to3">
-              <div class="n1" id="n4-1">1</div>
-              <div class="n2" id="n4-2">2</div>
-              <div class="n3" id="n4-3">3</div>
-            </div>
-            <div class="n4to6">
-              <div class="n4" id="n4-4">4</div>
-              <div class="n5" id="n4-5">5</div>
-              <div class="n6" id="n4-6">6</div>
-            </div>
-            <div class="n7to9">
-              <div class="n7" id="n4-7">7</div>
-              <div class="n8" id="n4-8">8</div>
-              <div class="n9" id="n4-9">9</div>
-            </div>
-          </div>
-
-          <div class="box5">
-            <div class="n1to3">
-              <div class="n1" id="n5-1">1</div>
-              <div class="n2" id="n5-2">2</div>
-              <div class="n3" id="n5-3">3</div>
-            </div>
-            <div class="n4to6">
-              <div class="n4" id="n5-4">4</div>
-              <div class="n5" id="n5-5">5</div>
-              <div class="n6" id="n5-6">6</div>
-            </div>
-            <div class="n7to9">
-              <div class="n7" id="n5-7">7</div>
-              <div class="n8" id="n5-8">8</div>
-              <div class="n9" id="n5-9">9</div>
-            </div>
-          </div>
-
-          <div class="box6">
-            <div class="n1to3">
-              <div class="n1" id="n6-1">1</div>
-              <div class="n2" id="n6-2">2</div>
-              <div class="n3" id="n6-3">3</div>
-            </div>
-            <div class="n4to6">
-              <div class="n4" id="n6-4">4</div>
-              <div class="n5" id="n6-5">5</div>
-              <div class="n6" id="n6-6">6</div>
-            </div>
-            <div class="n7to9">
-              <div class="n7" id="n6-7">7</div>
-              <div class="n8" id="n6-8">8</div>
-              <div class="n9" id="n6-9">9</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="box7to9">
-          <div class="box7">
-            <div class="n1to3">
-              <div class="n1" id="n7-1">1</div>
-              <div class="n2" id="n7-2">2</div>
-              <div class="n3" id="n7-3">3</div>
-            </div>
-            <div class="n4to6">
-              <div class="n4" id="n7-4">4</div>
-              <div class="n5" id="n7-5">5</div>
-              <div class="n6" id="n7-6">6</div>
-            </div>
-            <div class="n7to9">
-              <div class="n7" id="n7-7">7</div>
-              <div class="n8" id="n7-8">8</div>
-              <div class="n9" id="n7-9">9</div>
-            </div>
-          </div>
-
-          <div class="box8">
-            <div class="n1to3">
-              <div class="n1" id="n8-1">1</div>
-              <div class="n2" id="n8-2">2</div>
-              <div class="n3" id="n8-3">3</div>
-            </div>
-            <div class="n4to6">
-              <div class="n4" id="n8-4">4</div>
-              <div class="n5" id="n8-5">5</div>
-              <div class="n6" id="n8-6">6</div>
-            </div>
-            <div class="n7to9">
-              <div class="n7" id="n8-7">7</div>
-              <div class="n8" id="n8-8">8</div>
-              <div class="n9" id="n8-9">9</div>
-            </div>
-          </div>
-
-          <div class="box9">
-            <div class="n1to3">
-              <div class="n1" id="n9-1">1</div>
-              <div class="n2" id="n9-2">2</div>
-              <div class="n3" id="n9-3">3</div>
-            </div>
-            <div class="n4to6">
-              <div class="n4" id="n9-4">4</div>
-              <div class="n5" id="n9-5">5</div>
-              <div class="n6" id="n9-6">6</div>
-            </div>
-            <div class="n7to9">
-              <div class="n7" id="n9-7">7</div>
-              <div class="n8" id="n9-8">8</div>
-              <div class="n9" id="n9-9">9</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="container">
         <div class="boxLine">
           <div class="box1"></div>
           <div class="box2"></div>
@@ -277,7 +111,7 @@
           <div class="box8"></div>
           <div class="box9"></div>
         </div>
-      </div> -->
+      </div>
 
     </div>
     <!-- SUDOKU GAME END -->
@@ -292,7 +126,7 @@
               <p>Record : <span>20:05</span></p>
             </div>
             <div class="button">
-              <a href="#home">
+              <a href="#" onclick="showlevel();">
                 TRY HARD Ver
               </a>
             </div>
@@ -310,12 +144,12 @@
           <aside>
             <div class="record">
               <p>Record : <span>20:05</span></p>
-      
-            <div class="button">
-              <a href="#home">
-                TRY AGAIN
-              </a>
-            </div>
+
+              <div class="button">
+                <a href="#" onclick="showlevel();">
+                  TRY AGAIN
+                </a>
+              </div>
           </aside>
         </article>
       </section>
@@ -324,21 +158,26 @@
 
   </main>
 </body>
-   
+
 
 <script>
 
-document.querySelector('video').playbackRate = 0.5;
+  document.querySelector('video').playbackRate = 0.5;
 
-function showlevel(event){
-  $('#home').fadeOut("slow");
-  $('#level').fadeIn("slow");
-}
+  $('#level').fadeOut();
+  $('#sudoku').fadeOut();
+  $('#comp-easy').fadeOut();
+  $('#comp-hard').fadeOut();
 
-function showsudoku(event){
-  $('#level').fadeOut("slow");
-  $('#sudoku').fadeIn("slow");
-}
+  function showlevel(event) {
+    $('#home').fadeOut("slow");
+    $('#level').fadeIn("slow");
+  }
+
+  function showsudoku(event) {
+    $('#level').fadeOut("slow");
+    $('#sudoku').fadeIn("slow");
+  }
 
 // $( "#playbtn" ).mousemove(function() {
 //   $( "#playbtn" ).animate({

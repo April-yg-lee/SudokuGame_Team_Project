@@ -219,7 +219,7 @@
     -8px -8px 20px #c8c9cc;
 }
 
-.box1to3, .box4to6, .box7to9 {
+.boxLine {
     height: 33.3%;
     width: 100%;
     display: flex;
