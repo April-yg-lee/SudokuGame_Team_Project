@@ -18,10 +18,7 @@
 
   <!-- Linwen part -->
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@500;700&family=Comfortaa:wght@500&family=Courgette&family=Kalam&family=Lavishly+Yours&family=Parisienne&family=Roboto+Mono&family=Sacramento&family=Ultra&family=Viga&display=swap" rel="stylesheet"></head>
- 
   <script src="./jquery-3.6.0.js"></script>
-  <script src="./April.js" defer></script>
-
   <!-- Linwen part -->      
   <title>SUDOKU GAME</title>
 </head>
@@ -72,14 +69,14 @@
       </span>
 
       <ul class="num-selection">
-        <div class="select1to9">
+        <div class="select1to5">
           <li>1</li>
           <li>2</li>
           <li>3</li>
           <li>4</li>
           <li>5</li>
         </div>
-        <div class="select1to9">
+        <div class="select6to9">
           <li>6</li>
           <li>7</li>
           <li>8</li>
@@ -320,6 +317,14 @@ function showsudoku(event){
   $('#sudoku').fadeIn("slow");
 }
 
+$( "#playbtn" ).mousemove(function() {
+  $( "#playbtn" ).animate({
+    height: 200,
+  width: 400,
+  opacity: 0.5
+}, 1000, "linear", function() {
+});
+})
 
 </script>
 
