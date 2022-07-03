@@ -161,7 +161,6 @@ $(document).on("click", ".select1to9 li", function () {
       let isDone = checkForAnswer();
       console.log('게임완료 여부 : ' + isDone);
   }
-
 });
 
 
@@ -169,7 +168,7 @@ $(document).on("click", ".select1to9 li", function () {
 
 
 
-// check if the value is '0' or not
+// check if the value is '0' or not in the answer
 function checkForQuestion(positionX, positionY) {
   let question = levelObj[gameTypeQuestion][positionX][positionY];
 
@@ -212,7 +211,7 @@ function checkValueInPosition(selectNumber, positionX, positionY) {
 
 
 
-// check if every cell has number 
+// check if every cell has filled in with Number 
 function checkValueCompleted() {
   let isCompleted = true;
 
