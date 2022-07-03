@@ -167,7 +167,7 @@
 }
 
 
-.select1to5, .select6to9 {
+.select1to9 {
     height: 100%;
     width: 50%;
 
@@ -178,7 +178,7 @@
     row-gap: 5%;
 }
 
-.select1to5 li, .select6to9 li {
+.select1to9 li {
     background-color: #7B40E7;
     border-radius: 100%;
     color: #FFDF59;
@@ -396,15 +396,20 @@
 /* cell color change when user click empty cell */
 
 .active {
-    background-color: rgb(81, 201, 107);
+    background-color: #7B40E7;
+    color: #FFDF59;
 }
 
 /* cell color change when user input wrong value */
 .wrong {
-    background-color: rgb(238, 6, 6);
+    background-color: #FFDF59;
 }
 
+
 .num-selection li:hover {
-    background-color: rgb(181, 231, 86);
+    background-color: #FFDF59;
+    color: #7B40E7;
+    font-weight: 900;
+    border: 8px solid #7B40E7;
     cursor: grab;
 }
