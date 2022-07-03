@@ -17,13 +17,16 @@
 
 
   <!-- Linwen part -->
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@500;700&family=Comfortaa:wght@500&family=Courgette&family=Kalam&family=Lavishly+Yours&family=Parisienne&family=Roboto+Mono&family=Sacramento&family=Ultra&family=Viga&display=swap" rel="stylesheet"></head>
- 
-  <script src="./jquery-3.6.0.js"></script>
-  <script src="./April.js" defer></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@500;700&family=Comfortaa:wght@500&family=Courgette&family=Kalam&family=Lavishly+Yours&family=Parisienne&family=Roboto+Mono&family=Sacramento&family=Ultra&family=Viga&display=swap"
+    rel="stylesheet">
+</head>
 
-  <!-- Linwen part -->      
-  <title>SUDOKU GAME</title>
+<script src="./jquery-3.6.0.js"></script>
+<script src="./April.js" defer></script>
+
+<!-- Linwen part -->
+<title>SUDOKU GAME</title>
 </head>
 
 <body>
@@ -36,9 +39,9 @@
       </video>
 
       <div id="playbtn">
-        <a id = "gotolevel" href="#" onclick = "showlevel();"></a>
+        <a id="gotolevel" href="#" onclick="showlevel();"></a>
       </div>
-    
+
       <div id="member">
         <span>April / Emma / Linwen <br> Matheus / Mamiko</span>
       </div>
@@ -54,10 +57,10 @@
           <source src="./img/logowithbg_square.mp4" type="video/mp4">
         </video>
       </div>
-      
-      <a id = "gotoeasy" class="easy" href="#" onclick = "showsudoku();"></a>
-      <a id = "gotodifficult" class="difficult" href="#" onclick = "showsudoku();"></a>
-    
+
+      <a id="gotoeasy" class="easy" href="#" onclick="showsudoku();"></a>
+      <a id="gotodifficult" class="difficult" href="#" onclick="showsudoku();"></a>
+
     </div>
 
     <!-- Select Level END -->
@@ -264,6 +267,13 @@
 
     <!-- COMPLETED EASY SECTION -->
     <div id="comp-easy">
+
+      <div class="level-video">
+        <video autoplay loop muted class="v-header">
+          <source src="./img/logowithbg_square.mp4" type="video/mp4">
+        </video>
+      </div>
+
       <section class="comp-box">
         <article>
           <h2>LEVEL COMPLETE!</h2>
@@ -272,7 +282,7 @@
               <p>Record : <span>20:05</span></p>
             </div>
             <div class="button">
-              <a href="#home">
+              <a href="#level">
                 TRY HARD Ver
               </a>
             </div>
@@ -284,6 +294,13 @@
 
     <!-- COMPLETED HARD SECTION -->
     <div id="comp-hard">
+
+      <div class="level-video">
+        <video autoplay loop muted class="v-header">
+          <source src="./img/logowithbg_square.mp4" type="video/mp4">
+        </video>
+      </div>
+
       <section class="comp-box">
         <article>
           <h2>CONGRATULATION!</h2>
@@ -307,20 +324,17 @@
 
 
 <script>
+  document.querySelector('video').playbackRate = 0.5;
 
-document.querySelector('video').playbackRate = 0.5;
+  function showlevel(event) {
+    $('#home').fadeOut("slow");
+    $('#level').fadeIn("slow");
+  }
 
-function showlevel(event){
-  $('#home').fadeOut("slow");
-  $('#level').fadeIn("slow");
-}
-
-function showsudoku(event){
-  $('#level').fadeOut("slow");
-  $('#sudoku').fadeIn("slow");
-}
-
-
+  function showsudoku(event) {
+    $('#level').fadeOut("slow");
+    $('#sudoku').fadeIn("slow");
+  }
 </script>
 
 </html>
