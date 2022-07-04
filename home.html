@@ -118,6 +118,13 @@
 
     <!-- COMPLETED EASY SECTION -->
     <div id="comp-easy">
+
+      <div class="level-video">
+        <video autoplay loop muted class="v-header">
+          <source src="./img/logowithbg_square.mp4" type="video/mp4">
+        </video>
+      </div>
+
       <section class="comp-box">
         <article>
           <h2>LEVEL COMPLETE!</h2>
@@ -138,6 +145,13 @@
 
     <!-- COMPLETED HARD SECTION -->
     <div id="comp-hard">
+
+      <div class="level-video">
+        <video autoplay loop muted class="v-header">
+          <source src="./img/logowithbg_square.mp4" type="video/mp4">
+        </video>
+      </div>
+
       <section class="comp-box">
         <article>
           <h2>CONGRATULATION!</h2>
@@ -161,6 +175,7 @@
 
 
 <script>
+  document.querySelector('video').playbackRate = 0.5;
 
   document.querySelector('video').playbackRate = 0.5;
 
@@ -179,15 +194,14 @@
     $('#sudoku').fadeIn("slow");
   }
 
-// $( "#playbtn" ).mousemove(function() {
-//   $( "#playbtn" ).animate({
-//     height: 200,
-//   width: 400,
-//   opacity: 0.5
-// }, 1000, "linear", function() {
-// });
-// })
-
+  // $( "#playbtn" ).mousemove(function() {
+  //   $( "#playbtn" ).animate({
+  //     height: 200,
+  //   width: 400,
+  //   opacity: 0.5
+  // }, 1000, "linear", function() {
+  // });
+  // })
 </script>
 
 </html>
