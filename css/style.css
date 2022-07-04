@@ -12,10 +12,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;  
+    justify-content: end;
 }
 
-#home .v-header{
+#home .v-header {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -23,7 +23,7 @@
     z-index: 1;
 }
 
-#playbtn{
+#playbtn {
     padding-bottom: 10%;
     background: url("/img/play-btn.png");
     background-position: center;
@@ -43,7 +43,7 @@
     height: 100%;
 }
 
-#member{
+#member {
     position: absolute;
     z-index: 1;
     color: #7B40E7;
@@ -54,13 +54,13 @@
     font-size: 20px;
 }
 
-#member span{
+#member span {
     padding: 3%;
 }
 
 /************************* Level page *******************************/
 
-#level{
+#level {
     background: url("/img/bg.png");
     background-position: center;
     background-size: cover;
@@ -72,16 +72,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;  
+    justify-content: center;
 }
 
-#level .level-video{
+#level .level-video, #comp-easy .level-video {
     width: 100%;
     display: flex;
     padding-left: 10%;
 }
 
-#level .v-header{
+#level .v-header, #comp-easy .v-header {
     position: absolute;
     display: flex;
     width: 17%;
@@ -91,7 +91,7 @@
 }
 
 
-.easy{
+.easy {
     background: url("/img/easy-btn.png");
     background-position: center;
     background-size: contain;
@@ -103,7 +103,7 @@
     padding-top: 10%;
 }
 
-.difficult{
+.difficult {
     background: url("/img/diff-btn.png");
     background-position: center;
     background-size: contain;
@@ -132,6 +132,7 @@
     column-gap: 3%;
 
 }
+
 /************************* Sudoku page - timer *******************************/
 
 .timer {
@@ -193,11 +194,11 @@
     justify-content: center;
 
     box-shadow: 8px 8px 20px #c8c9cc,
-    -8px -8px 20px #c8c9cc;
+        -8px -8px 20px #c8c9cc;
 
 }
 
-#noshow{
+#noshow {
     /* display: none; */
     opacity: 0;
 }
@@ -216,10 +217,10 @@
     font-size: 40px;
     font-family: 'Viga', sans-serif;
     box-shadow: 8px 8px 20px #c8c9cc,
-    -8px -8px 20px #c8c9cc;
+        -8px -8px 20px #c8c9cc;
 }
 
-.box1to3, .box4to6, .box7to9 {
+.boxLine {
     height: 33.3%;
     width: 100%;
     display: flex;
@@ -287,9 +288,15 @@
     align-items: center;
 }
 
+#comp-easy .v-header {
+    width: 15%;
+}
+
 .comp-box {
     padding-top: 30px;
-    width: 680px;
+    margin-left: 5%;
+    margin-bottom: 6%;
+    width: 700px;
     height: 500px;
     border-radius: 30px;
     background: rgba(255, 223, 89, 0.75);
@@ -369,28 +376,8 @@
     text-shadow: 3px 3px 3px #777;
     color: #F5F5F5;
     border-radius: 50px;
-    transition: 1s;
 }
 
-
-/* COMPLETED HARD */
-
-#comp-hard {
-    background: url("/img/bg.png");
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#comp-hard h2 {
-    font-size: 63px;
-}
 
 /**********JS Connection part **********/
 /* cell color change when user click empty cell */
