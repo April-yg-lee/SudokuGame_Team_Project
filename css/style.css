@@ -75,13 +75,13 @@
     justify-content: center;
 }
 
-#level .level-video, #comp-easy .level-video, #comp-hard .level-video {
+#level .level-video, #comp-easy .level-video {
     width: 100%;
     display: flex;
     padding-left: 10%;
 }
 
-#level .v-header, #comp-easy .v-header, #comp-hard .v-header {
+#level .v-header, #comp-easy .v-header {
     position: absolute;
     display: flex;
     width: 17%;
@@ -288,7 +288,7 @@
     align-items: center;
 }
 
-#comp-easy .v-header, #comp-hard .v-header {
+#comp-easy .v-header {
     width: 15%;
 }
 
@@ -378,25 +378,6 @@
     border-radius: 50px;
 }
 
-
-/* COMPLETED HARD */
-
-#comp-hard {
-    background: url("/img/bg.png");
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#comp-hard h2 {
-    font-size: 63px;
-}
 
 /**********JS Connection part **********/
 /* cell color change when user click empty cell */
