@@ -25,7 +25,7 @@
 
 #playbtn {
     padding-bottom: 10%;
-    background: url("/img/play-btn.png");
+    background: url("/img/play_btn.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -91,8 +91,8 @@
 }
 
 
-.easy {
-    background: url("/img/easy-btn.png");
+#gotoeasy{
+    background: url("/img/easy_btn.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -103,8 +103,8 @@
     padding-top: 10%;
 }
 
-.difficult {
-    background: url("/img/diff-btn.png");
+#gotodifficult{
+    background: url("/img/diff_btn.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -391,7 +391,7 @@
 .wrong {
     background-color: #FFDF59;
 
-    background: url("/img/wrongbtn.png");
+    background: url("/img/wrong_btn.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
