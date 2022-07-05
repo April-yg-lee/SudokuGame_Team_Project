@@ -120,8 +120,6 @@ function checkValueInPosition(selectNumber, positionX, positionY) {
 
 
 
-
-
 // check if every cell has number 
 function checkValueCompleted() {
     let isCompleted = true;
