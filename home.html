@@ -134,7 +134,7 @@
               <p>Record : <span>20:05</span></p>
             </div>
             <div class="button">
-              <a href="#" onclick="showlevel();">
+              <a id = "tryagain" href="#" onclick="showlevel();">
                 CHALLENGE AGAIN 
               </a>
             </div>
@@ -152,11 +152,11 @@
  
 document.querySelector('video').playbackRate = 0.5;
 
-$('#level').hide();
-$('#sudoku').hide();
-$('#sudoku').hide();
-$('#comp-easy').hide();
-$('#comp-hard').hide();
+// $('#level').hide();
+// $('#sudoku').hide();
+// $('#sudoku').hide();
+// $('#comp-easy').hide();
+// $('#comp-hard').hide();
 
 
 function showlevel(event){
@@ -184,8 +184,8 @@ $( "#playbtn" ).click(function() {
 
 $( "#gotoeasy" ).click(function() {
   $( "#gotoeasy" ).animate({
-    height: 500,
-    width: 800,
+    height: "10%" ,
+    width: "10%" ,
     opacity: 0.9
     }, 
     200, "linear", function() {
@@ -195,13 +195,35 @@ $( "#gotoeasy" ).click(function() {
 
 $( "#gotodifficult" ).click(function() {
   $( "#gotodifficult" ).animate({
-    height: 500,
-    width: 800,
+    height: "10%" ,
+    width: "10%" ,
     opacity: 0.9
     }, 
     200, "linear", function() {
   });
 })
+
+
+$( "#tryagain" ).click(function() {
+  $( "#gotoeasy" ).animate({
+    width: "50%" ,
+    height: "30%" ,
+    opacity: 0.9
+    }, 
+    200, "linear", function() {
+  });
+
+  $( "#gotodifficult" ).animate({
+    width: "60%" ,
+    height: "35%" ,
+    opacity: 0.9
+    }, 
+    200, "linear", function() {
+  });
+  
+})
+
+
 </script>
 
 </html>
