@@ -2,6 +2,7 @@ let inputBox = $(".container div div div div");
 
 // Event for When you click the input box 
 $(document).on("click", ".container div div div div", function () {
+    inputBox = $(".container div div div div");
     let index = inputBox.index(this);
 
     inputBox.removeClass('wrong');
@@ -56,19 +57,20 @@ $(document).on("click", ".select1to9 li", function () {
     if (checkValueCompleted()) {
 
         // check the every answer is correct
-        let isDone = checkForAnswer();
-        console.log('게임완료 여부 : ' + isDone);
-        completedSound(); // Matt's function
+     
+        if (checkForAnswer()) {
+            completedSound(); // Matt's function
+            
+            // Store the record and Show the record on comp-section 
+            $('#recordTime').text($('.minute').text());
+            needToStop = true;
+            clearInput();
 
-        let level = gameTypeAnswer.split('-')[0];
-
-        $('#sudoku').fadeOut("slow");
-        if (level === 'easy') {
+            $('#sudoku').fadeOut("slow");
             $('#comp-easy').fadeIn("slow");
-
-        } else if (level === 'hard') {
-            $('#comp-hard').fadeIn("slow");
-
+        } else {
+            // input every cell, but wrong answer somewhere
+            wrongChoiceAudio();
         }
 
     }
@@ -124,12 +126,14 @@ function checkValueInPosition(selectNumber, positionX, positionY) {
 
 // check if every cell has number 
 function checkValueCompleted() {
-    let isCompleted = true;
+    let isCompleted = false;;
 
     inputBox.each(function () {
         if ($(this).text() === '') {
             isCompleted = false;
             return false;
+        } else {
+            isCompleted = true;
         }
     });
     return isCompleted;
@@ -142,7 +146,7 @@ function checkValueCompleted() {
 
 // check the answer if every cell is correct with answer 
 function checkForAnswer() {
-    let isCorrected = true;
+    let isCorrected = false;
 
     inputBox.each(function () {
         let inputValue = parseInt($(this).text());  // current input number 
@@ -154,6 +158,8 @@ function checkForAnswer() {
         if (inputValue !== answer) {
             isCorrected = false;
             return false;
+        } else {
+            isCorrected = true;
         }
     });
     return isCorrected;

@@ -1,8 +1,17 @@
 'use strict';
 
 const container = document.querySelector('.container');
+const levelBtn = document.querySelectorAll('#level > a');
+const gameTimer = document.querySelector('.timer');
+const timerText = document.querySelector('.minute');
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 3;
+const GAME_START_SEC = 0;
 let gameTypeQuestion = '';
 let gameTypeAnswer = '';
+let timer = 0;
+let needToStop = false;
+let chosenLevel = '';
 
 // make level obj, and number arrays
 const levelObj = {
@@ -102,20 +111,20 @@ const levelObj = {
         "8": [0, 8, 0, 6, 7, 0, 3, 0, 1],
     }
 }
-selectLev(levelObj);
+// selectLev(levelObj);
 
 // choose level
-function selectLev(levelObj) {
-    // if(button.innerHTML == 'basic')
-    if (true) {
-        createInput(levelObj['easy-1-question']);
-        gameTypeQuestion = 'easy-1-question';
-        gameTypeAnswer = 'easy-1-answer';
+// function selectLev(levelObj) {
+//     // if(button.innerHTML == 'basic')
+//     if (true) {
+//         createInput(levelObj['easy-1-answer']);
+//         gameTypeQuestion = 'easy-1-question';
+//         gameTypeAnswer = 'easy-1-answer';
 
-    } else {
-        createInput(levelObj['easy-2-answer']);
-    }
-}
+//     } else {
+//         createInput(levelObj['easy-2-answer']);
+//     }
+// }
 
 // create Input boxes 
 function createInput(selectedLev) {
@@ -138,9 +147,87 @@ function createInput(selectedLev) {
                 <div class="n8" id=${i}-7>${selectedLev[i][g + 7] === 0 ? '' : selectedLev[i][g + 7]}</div>
                 <div class="n9" id=${i}-8>${selectedLev[i][g + 8] === 0 ? '' : selectedLev[i][g + 8]}</div>
             </div>`
-            document.querySelector(`.box${boxNum}`).style.borderBottom = '5px solid black';
+
+            if (boxNum < 7) document.querySelector(`.box${boxNum}`).style.borderBottom = '5px solid #7B40E7';
         }
         boxNum++;
     }
 }
-// 
+
+// clear Input boxes 
+function clearInput() {
+    let boxNum = 1;
+    for (let i = 0; i < 9; i++) {
+        for (let g = 0; g < 1; g++) {
+            document.querySelector(`.box${boxNum}`).innerHTML = '';
+        }
+        boxNum++;
+    }
+}
+
+
+function RandomLevel(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+
+// choose level
+function selectLev(levelObj, randomNum) {
+
+    console.log('chosenLevel : ' + chosenLevel);
+    console.log('randomNum : ' + randomNum);
+    needToStop = false;
+
+    if (chosenLevel === 'easy') {
+        // createInput(levelObj[`easy-1-answer`]);
+        // createInput(levelObj[`easy-${randomNum}-question`]);
+        createInput(levelObj[`easy-${randomNum}-answer`]);
+        gameTypeQuestion = `easy-${randomNum}-question`;
+        gameTypeAnswer = `easy-${randomNum}-answer`;
+
+    } else {
+        // createInput(levelObj[`hard-${randomNum}-question`]);
+        createInput(levelObj[`hard-${randomNum}-answer`]);
+        gameTypeQuestion = `hard-${randomNum}-question`;
+        gameTypeAnswer = `hard-${randomNum}-answer`;
+    }
+}
+
+
+
+levelBtn.forEach(level => {
+    level.addEventListener('click', (event) => {
+        startgameTimer(event);
+        selectLev(levelObj, RandomLevel(MIN_NUMBER, MAX_NUMBER));
+    })
+});
+
+
+
+
+
+// Timer 
+function startgameTimer(event) {
+    let gameDurationSec = GAME_START_SEC;
+
+    updateTimerText(gameDurationSec);
+
+    timer = setInterval(() => {
+        if (needToStop || gameDurationSec > (60 * 60)) {
+            clearInterval(timer);
+            return;
+        }
+        updateTimerText(++gameDurationSec);
+    }, 1000)
+}
+
+function updateTimerText(time) {
+
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    if (minutes < 10) minutes = '0' + minutes;
+    if (seconds < 10) seconds = '0' + seconds;
+
+    timerText.innerHTML = `${minutes} : ${seconds}`;
+}

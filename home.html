@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <!-- Mamiko part -->  
+  <!-- Mamiko part -->
 
 
   <!-- Linwen part -->
@@ -53,7 +53,7 @@
     <!-- HOME SECTION END -->
 
 
-    
+
     <!-- Select Level -->
     <div id="level">
       <div class="level-video">
@@ -61,10 +61,10 @@
           <source src="./img/logowithbg_square.mp4" type="video/mp4">
         </video>
       </div>
-      
-      <a id = "gotoeasy" href="#" onclick = "showsudoku();"></a>
-      <a id = "gotodifficult" href="#" onclick = "showsudoku();"></a>
-    
+
+      <a id="gotoeasy" href="#" onclick="showsudoku('easy');"></a>
+      <a id="gotodifficult" href="#" onclick="showsudoku('diff');"></a>
+
     </div>
 
     <!-- Select Level END -->
@@ -75,7 +75,7 @@
 
       <span class="timer">
         <i class="fas fa-stopwatch"></i>
-        <p>0:10</p>
+        <p class="minute">00:00</p>
       </span>
 
       <ul class="num-selection">
@@ -133,11 +133,11 @@
           <h2>GAME COMPLETED!</h2>
           <aside>
             <div class="record">
-              <p>Record : <span>20:05</span></p>
+              <p>Record : <span id="recordTime">00:00</span></p>
             </div>
             <div class="button">
               <a href="#" onclick="showlevel();">
-                CHALLENGE AGAIN 
+                CHALLENGE AGAIN
               </a>
             </div>
           </aside>
@@ -151,59 +151,62 @@
 
 
 <script>
- 
-document.querySelector('video').playbackRate = 0.5;
 
-$('#level').hide();
-$('#sudoku').hide();
-$('#sudoku').hide();
-$('#comp-easy').hide();
-$('#comp-hard').hide();
+  document.querySelector('video').playbackRate = 0.5;
 
-
-function showlevel(event){
-  $('#home').fadeOut("slow");
-  $('#level').fadeIn("slow");
-}
-
-function showsudoku(event){
-  $('#level').fadeOut("slow");
-  $('#sudoku').fadeIn("slow");
-}
+  $('#level').hide();
+  $('#sudoku').hide();
+  $('#sudoku').hide();
+  $('#comp-easy').hide();
 
 
+  function showlevel(event) {
+    $('#home').fadeOut("slow");
+    $('#sudoku').hide();
+    $('#comp-easy').hide();
+    $('#level').fadeIn("slow");
+  }
 
-$( "#playbtn" ).click(function() {
-  $( "#playbtn" ).animate({
-    height: 500,
-    width: 800,
-    opacity: 0.9
-    }, 
-    500, "linear", function() {
-  });
-})
-
-
-$( "#gotoeasy" ).click(function() {
-  $( "#gotoeasy" ).animate({
-    height: 500,
-    width: 800,
-    opacity: 0.9
-    }, 
-    200, "linear", function() {
-  });
-})
+  function showsudoku(event) {
+    $('#level').fadeOut("slow");
+    $('#sudoku').fadeIn("slow");
+    chosenLevel = event;
+  }
 
 
-$( "#gotodifficult" ).click(function() {
-  $( "#gotodifficult" ).animate({
-    height: 500,
-    width: 800,
-    opacity: 0.9
-    }, 
-    200, "linear", function() {
-  });
-})
+
+  $("#playbtn").click(function () {
+    $("#playbtn").animate({
+      height: 500,
+      width: 800,
+      opacity: 0.9
+    },
+      500, "linear", function () {
+      });
+  })
+
+
+  $("#gotoeasy").click(function () {
+    $("#gotoeasy").animate({
+      height: 500,
+      width: 800,
+      opacity: 0.9
+    },
+      200, "linear", function () {
+      });
+  })
+
+
+  $("#gotodifficult").click(function () {
+    $("#gotodifficult").animate({
+      height: 500,
+      width: 800,
+      opacity: 0.9
+    },
+      200, "linear", function () {
+      });
+  })
+
 </script>
 
 </html>
