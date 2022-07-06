@@ -76,13 +76,15 @@
     justify-content: center;
 }
 
-#level .level-video, #comp-easy .level-video {
+#level .level-video,
+#comp-easy .level-video {
     width: 100%;
     display: flex;
     padding-left: 10%;
 }
 
-#level .v-header, #comp-easy .v-header {
+#level .v-header,
+#comp-easy .v-header {
     position: absolute;
     display: flex;
     width: 17%;
@@ -92,7 +94,7 @@
 }
 
 
-#gotoeasy{
+#gotoeasy {
     background: url("/img/easy_btn.png");
     background-position: center;
     background-size: contain;
@@ -104,7 +106,7 @@
     padding-top: 10%;
 }
 
-#gotodifficult{
+#gotodifficult {
     background: url("/img/diff_btn.png");
     background-position: center;
     background-size: contain;
@@ -233,20 +235,32 @@
 }
 
 
-.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9 {
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8,
+.box9 {
     height: 100%;
     width: 33.3%;
     display: flex;
     flex-direction: column;
 }
 
-.box2, .box5, .box8 {
+.box2,
+.box5,
+.box8 {
     border-left: 5px solid #7B40E7;
     border-right: 5px solid #7B40E7;
 }
 
 
-.n1to3, .n4to6, .n7to9 {
+.n1to3,
+.n4to6,
+.n7to9 {
     height: 33.3%;
     width: 100%;
     display: flex;
@@ -257,7 +271,15 @@
     border-bottom: 3px solid lightgray;
 }
 
-.n1, .n2, .n3, .n4, .n5, .n6, .n7, .n8, .n9 {
+.n1,
+.n2,
+.n3,
+.n4,
+.n5,
+.n6,
+.n7,
+.n8,
+.n9 {
     height: 100%;
     width: 33.3%;
     display: flex;
@@ -266,7 +288,9 @@
     justify-content: center;
 }
 
-.n2, .n5, .n8 {
+.n2,
+.n5,
+.n8 {
     border-left: 3px solid lightgray;
     border-right: 3px solid lightgray;
 }
@@ -371,9 +395,9 @@
 }
 
 .comp-box .button a:hover {
-    background-color: rgba(180, 2, 8, 0.6);
+    background-color: rgba(221, 22, 28, 0.815);
     box-shadow: inset 5px 5px 30px #666,
-        inset -5px -5px 30px #b50508;
+        inset -5px -5px 30px #e61c05;
     text-shadow: 3px 3px 3px #777;
     color: #F5F5F5;
     border-radius: 50px;
@@ -398,7 +422,7 @@
     background-repeat: no-repeat;
 
 
-    
+
 }
 
 
@@ -408,4 +432,10 @@
     font-weight: 900;
     border: 8px solid #7B40E7;
     cursor: grab;
+}
+
+
+.sameNumber {
+    background-color: lightgreen;
+    color: black;
 }
