@@ -136,8 +136,8 @@
               <p>Record : <span id="recordTime">00:00</span></p>
             </div>
             <div class="button">
-              <a id = "tryagain" href="#" onclick="showlevel();">
-                CHALLENGE AGAIN 
+              <a id="tryagain" href="#" onclick="showlevel();">
+                CHALLENGE AGAIN
               </a>
             </div>
           </aside>
@@ -186,47 +186,59 @@
   })
 
 
-$( "#gotoeasy" ).click(function() {
-  $( "#gotoeasy" ).animate({
-    height: "10%" ,
-    width: "10%" ,
-    opacity: 0.9
-    }, 
-    200, "linear", function() {
-  });
-})
+  $("#gotoeasy").click(function () {
+    $("#gotoeasy").animate({
+      height: "10%",
+      width: "10%",
+      opacity: 0.9
+    },
+      200, "linear", function () {
+      });
+  })
 
 
-$( "#gotodifficult" ).click(function() {
-  $( "#gotodifficult" ).animate({
-    height: "10%" ,
-    width: "10%" ,
-    opacity: 0.9
-    }, 
-    200, "linear", function() {
-  });
-})
+  $("#gotodifficult").click(function () {
+    $("#gotodifficult").animate({
+      height: "10%",
+      width: "10%",
+      opacity: 0.9
+    },
+      200, "linear", function () {
+      });
+  })
 
 
-$( "#tryagain" ).click(function() {
-  $( "#gotoeasy" ).animate({
-    width: "50%" ,
-    height: "30%" ,
-    opacity: 0.9
-    }, 
-    200, "linear", function() {
-  });
+  $("#tryagain").click(function () {
+    $("#gotoeasy").animate({
+      width: "50%",
+      height: "30%",
+      opacity: 0.9
+    },
+      200, "linear", function () {
+      });
 
-  $( "#gotodifficult" ).animate({
-    width: "60%" ,
-    height: "35%" ,
-    opacity: 0.9
-    }, 
-    200, "linear", function() {
-  });
-  
-})
+    $("#gotodifficult").animate({
+      width: "60%",
+      height: "35%",
+      opacity: 0.9
+    },
+      200, "linear", function () {
+      });
 
+  })
+
+  // MAMIKO PART this is event for when user clicked same number
+
+  function checkSameValue(number) {
+    inputBox.removeClass('sameNumber');
+    if (number) {
+      inputBox.each(function () {
+        if ($(this).text() === number) {
+          $(this).addClass('sameNumber');
+        }
+      })
+    }
+  }
 
 </script>
 
