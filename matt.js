@@ -43,7 +43,7 @@ $('.button').click(function(){
 // Function to return when user make a wrong choice.
 function wrongChoiceAudio(){
   const audio = new Audio();
-  audio.src = './audios/fail.mp3';
+  audio.src = './audios/wrongSound.mpeg';
   audio.play(); 
 };
 
