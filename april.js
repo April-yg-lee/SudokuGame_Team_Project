@@ -58,6 +58,7 @@ $(document).on("click", ".select1to9 li", function () {
         // check the every answer is correct
         let isDone = checkForAnswer();
         console.log('게임완료 여부 : ' + isDone);
+        completedSound(); // Matt's function
 
         let level = gameTypeAnswer.split('-')[0];
 
@@ -106,6 +107,7 @@ function checkValueInPosition(selectNumber, positionX, positionY) {
         let answer = levelObj[gameTypeAnswer][positionX][positionY];
 
         if (answer !== selectNumber) {
+            wrongChoiceAudio(); // Matt's function
             return false;
         } else {
             return true;

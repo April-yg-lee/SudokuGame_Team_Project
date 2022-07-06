@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <!-- Mamiko part -->
+  <!-- Mamiko part -->  
 
 
   <!-- Linwen part -->
@@ -53,6 +53,7 @@
     <!-- HOME SECTION END -->
 
 
+    
     <!-- Select Level -->
     <div id="level">
       <div class="level-video">
@@ -60,10 +61,10 @@
           <source src="./img/logowithbg_square.mp4" type="video/mp4">
         </video>
       </div>
-
-      <a id="gotoeasy" class="easy" href="#" onclick="showsudoku();"></a>
-      <a id="gotodifficult" class="difficult" href="#" onclick="showsudoku();"></a>
-
+      
+      <a id = "gotoeasy" href="#" onclick = "showsudoku();"></a>
+      <a id = "gotodifficult" href="#" onclick = "showsudoku();"></a>
+    
     </div>
 
     <!-- Select Level END -->
@@ -150,33 +151,59 @@
 
 
 <script>
-  document.querySelector('video').playbackRate = 0.5;
+ 
+document.querySelector('video').playbackRate = 0.5;
 
-  document.querySelector('video').playbackRate = 0.5;
+$('#level').hide();
+$('#sudoku').hide();
+$('#sudoku').hide();
+$('#comp-easy').hide();
+$('#comp-hard').hide();
 
-  $('#level').fadeOut();
-  $('#sudoku').fadeOut();
-  $('#comp-easy').fadeOut();
-  $('#comp-hard').fadeOut();
 
-  function showlevel(event) {
-    $('#home').fadeOut("slow");
-    $('#level').fadeIn("slow");
-  }
+function showlevel(event){
+  $('#home').fadeOut("slow");
+  $('#level').fadeIn("slow");
+}
 
-  function showsudoku(event) {
-    $('#level').fadeOut("slow");
-    $('#sudoku').fadeIn("slow");
-  }
+function showsudoku(event){
+  $('#level').fadeOut("slow");
+  $('#sudoku').fadeIn("slow");
+}
 
-  // $( "#playbtn" ).mousemove(function() {
-  //   $( "#playbtn" ).animate({
-  //     height: 200,
-  //   width: 400,
-  //   opacity: 0.5
-  // }, 1000, "linear", function() {
-  // });
-  // })
+
+
+$( "#playbtn" ).click(function() {
+  $( "#playbtn" ).animate({
+    height: 500,
+    width: 800,
+    opacity: 0.9
+    }, 
+    500, "linear", function() {
+  });
+})
+
+
+$( "#gotoeasy" ).click(function() {
+  $( "#gotoeasy" ).animate({
+    height: 500,
+    width: 800,
+    opacity: 0.9
+    }, 
+    200, "linear", function() {
+  });
+})
+
+
+$( "#gotodifficult" ).click(function() {
+  $( "#gotodifficult" ).animate({
+    height: 500,
+    width: 800,
+    opacity: 0.9
+    }, 
+    200, "linear", function() {
+  });
+})
 </script>
 
 </html>
