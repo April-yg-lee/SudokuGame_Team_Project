@@ -395,9 +395,9 @@
 }
 
 .comp-box .button a:hover {
-    background-color: rgba(180, 2, 8, 0.6);
+    background-color: rgba(221, 22, 28, 0.815);
     box-shadow: inset 5px 5px 30px #666,
-        inset -5px -5px 30px #b50508;
+        inset -5px -5px 30px #e61c05;
     text-shadow: 3px 3px 3px #777;
     color: #F5F5F5;
     border-radius: 50px;
