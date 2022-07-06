@@ -43,6 +43,7 @@
     height: 100%;
 }
 
+
 #member {
     position: absolute;
     z-index: 1;
@@ -395,6 +396,9 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+
+
+    
 }
 
 
