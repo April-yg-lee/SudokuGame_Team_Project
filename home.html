@@ -61,6 +61,7 @@
                 <video autoplay loop muted class="v-header">
                     <source src="./img/logowithbg_square.mp4" type="video/mp4">
                 </video>
+
             </div>
 
             <a id="gotoeasy" href="#" onclick="showsudoku('easy');"></a>
@@ -74,16 +75,22 @@
         <!-- SUDOKU GAME -->
         <div id="sudoku">
 
+            <div class = "info">
+
             <span class="timer">
                 <i class="fas fa-stopwatch"></i>
                 <p class="minute">00:00</p>
             </span>
 
-            <div class="button">
-                <a id="gohome" href="#" onclick="showlevel();">
 
-                </a>
+
+            <div class="level-video">
+                <video id = "gohome" autoplay loop muted class="v-header" onclick="showhome();">
+                    <source src="./img/home_btn.mp4" type="video/mp4">
+                </video>
+
             </div>
+        </div>
 
             <ul class="num-selection">
                 <div class="select1to9">
@@ -140,7 +147,7 @@
                     <h2>GAME COMPLETED!</h2>
                     <aside>
                         <div class="record">
-                            <p>Record : <span id="recordTime">00:00</span></p>
+                            <p>Record <span id="recordTime">00:00</span></p>
                         </div>
                         <div class="button">
                             <a id="tryagain" href="#" onclick="showlevel();">
@@ -159,13 +166,22 @@
 
 <script>
 
+    // Linwen PART show the page and button animation
+
     document.querySelector('video').playbackRate = 0.5;
 
-    $('#level').hide();
-    $('#sudoku').hide();
-    $('#sudoku').hide();
-    $('#comp-easy').hide();
+    // $('#level').hide();
+    // $('#sudoku').hide();
+    // $('#sudoku').hide();
+    // $('#comp-easy').hide();
 
+
+    function showhome(event) {
+        $('#level').fadeOut("slow");
+        $('#sudoku').fadeOut("slow");
+        $('#comp-easy').hide();
+        $('#home').fadeIn("slow");
+    }
 
     function showlevel(event) {
         $('#home').fadeOut("slow");
@@ -180,7 +196,7 @@
         chosenLevel = event;
     }
 
-
+   
 
     $("#playbtn").click(function () {
         $("#playbtn").animate({
@@ -195,42 +211,62 @@
 
     $("#gotoeasy").click(function () {
         $("#gotoeasy").animate({
-            height: "10%",
-            width: "10%",
+            height: "80%",
+            width: "80%",
             opacity: 0.9
         },
-            200, "linear", function () {
+            500, "linear", function () {
             });
     })
 
 
     $("#gotodifficult").click(function () {
         $("#gotodifficult").animate({
-            height: "10%",
-            width: "10%",
+            height: "80%",
+            width: "80%",
             opacity: 0.9
         },
-            200, "linear", function () {
+            500, "linear", function () {
             });
     })
 
 
     $("#tryagain").click(function () {
-        $("#gotoeasy").animate({
+        $("#gotoeasy").css({
             width: "50%",
             height: "30%",
-            opacity: 0.9
-        },
-            200, "linear", function () {
-            });
+            opacity: 1
+        })
 
-        $("#gotodifficult").animate({
+        $("#gotodifficult").css({
             width: "60%",
             height: "35%",
-            opacity: 0.9
-        },
-            200, "linear", function () {
-            });
+            opacity: 1
+        })
+    })
+
+    $("#gohome").click(function(){
+        $('#level').fadeOut("slow");
+        $('#sudoku').fadeOut("slow");
+        $('#comp-easy').hide();
+        $('#home').fadeIn("slow");
+
+        $("#playbtn").css({
+            width: "40%",
+            height: "30%",
+            opacity: 1
+        })
+        $("#gotoeasy").css({
+            width: "50%",
+            height: "30%",
+            opacity: 1
+        })
+
+        $("#gotodifficult").css({
+            width: "60%",
+            height: "35%",
+            opacity: 1
+        })
 
     })
 
