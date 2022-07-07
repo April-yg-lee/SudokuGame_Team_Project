@@ -136,7 +136,7 @@ function checkForAnswer() {
 
     if (inputValue !== answer) {
       isCorrected = false;
-      alert('There is wrong answer. Try again!');
+      swal("Ooops!", "Seems like some answer went wrong!", "error");
       return false;
     } else {
       isCorrected = true;
