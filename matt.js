@@ -1,5 +1,5 @@
-// Adding sound to play button.
-$('#playbtn').click(function(){
+// Adding sound to play,gohome, challengeAgain button.
+$('#playbtn, #gohome, #tryagain').click(function(){
   const audio = new Audio();
   audio.src = './audios/magic.mp3';
   audio.play();
@@ -43,7 +43,7 @@ $('.button').click(function(){
 // Function to return when user make a wrong choice.
 function wrongChoiceAudio(){
   const audio = new Audio();
-  audio.src = './audios/wrongSound.mpeg';
+  audio.src = './audios/fail.mp3';
   audio.play(); 
 };
 
