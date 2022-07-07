@@ -170,10 +170,10 @@
 
     document.querySelector('video').playbackRate = 0.5;
 
-    // $('#level').hide();
-    // $('#sudoku').hide();
-    // $('#sudoku').hide();
-    // $('#comp-easy').hide();
+    $('#level').hide();
+    $('#sudoku').hide();
+    $('#sudoku').hide();
+    $('#comp-easy').hide();
 
 
     function showhome(event) {
@@ -267,6 +267,9 @@
             height: "35%",
             opacity: 1
         })
+
+      needToStop = true;
+      clearInput();
 
     })
 

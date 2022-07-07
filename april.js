@@ -35,6 +35,8 @@ $(document).on("click", ".select1to9 li", function () {
     let positionX = position[0];
     let positionY = position[1];
 
+    checkSameValue(); 
+
     if (checkForQuestion(positionX, positionY)) {
       // check if the number was existed already or it's question(empty) number
 
@@ -134,6 +136,7 @@ function checkForAnswer() {
 
     if (inputValue !== answer) {
       isCorrected = false;
+      alert('There is wrong answer. Try again!');
       return false;
     } else {
       isCorrected = true;
