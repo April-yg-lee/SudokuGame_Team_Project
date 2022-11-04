@@ -7,60 +7,44 @@ $(document).on("click", ".container div div div div", function () {
   let number = inputBox.eq(index).text();
 
   inputBox.removeClass("wrong");
-  // NO any class when user see the screen at first (initialization)
 
   if ($(this).hasClass("active")) {
     inputBox.eq(index).removeClass("active");
-    // event for When you click same number one more time, color's gonna disappear.
   } else {
-    inputBox.removeClass("active"); // event before you click (initialization)
-    inputBox.eq(index).addClass("active"); // event for when you click the input number
+    inputBox.removeClass("active");
+    inputBox.eq(index).addClass("active");
   }
   checkSameValue(number);
 });
 
-// When you click the selected number 1 to 9, function's gonna be executed
+// Event for When you click the selected number 1 to 9
 $(document).on("click", ".select1to9 li", function () {
-  // todo: 9번사용후 비활성화 상태인지 아닌지 확인 후 아래 실행되어야함
-
   let targetBox = $(".container div").find(".active");
-  // check if any inputBox was clicked or not and put into the targetBox variable
 
-  console.log(targetBox);
-
-  // When user click any one input box, logic's gonna do
   if (targetBox.length > 0) {
     let selectNumber = $(".select1to9 li").index(this) + 1;
     let position = targetBox.prop("id").split("-");
     let positionX = position[0];
     let positionY = position[1];
 
-    checkSameValue(); 
+    checkSameValue();
 
     if (checkForQuestion(positionX, positionY)) {
-      // check if the number was existed already or it's question(empty) number
-
       if (checkValueInPosition(selectNumber, positionX, positionY)) {
-        // check the answer is correct with comparing
         targetBox.removeClass("active");
         targetBox.removeClass("wrong");
         targetBox.text(selectNumber);
       } else {
-        // only fore easy version
         targetBox.text("");
         targetBox.addClass("wrong");
       }
     }
   }
 
-  // check if every cell has number
   if (checkValueCompleted()) {
-    // check the every answer is correct
-
     if (checkForAnswer()) {
       completedSound(); // Matt's function
 
-      // Store the record and Show the record on comp-section
       $("#recordTime").text($(".minute").text());
       needToStop = true;
       clearInput();
@@ -68,17 +52,15 @@ $(document).on("click", ".select1to9 li", function () {
       $("#sudoku").fadeOut("slow");
       $("#comp-easy").fadeIn("slow");
     } else {
-      // input every cell, but wrong answer somewhere
       wrongChoiceAudio();
     }
   }
 });
 
-// check if the value is '0' or not
+// check if the value is '0' or not (0 means it's empty box to solve)
 function checkForQuestion(positionX, positionY) {
   let question = levelObj[gameTypeQuestion][positionX][positionY];
 
-  // Only value '0' can be revised in Question array !
   if (question === 0) {
     return true;
   } else {
@@ -90,7 +72,6 @@ function checkForQuestion(positionX, positionY) {
 function checkValueInPosition(selectNumber, positionX, positionY) {
   let level = gameTypeAnswer.split("-")[0];
 
-  // Easy level: Answer's gonna be checked everytime inputting
   if (level === "easy") {
     let answer = levelObj[gameTypeAnswer][positionX][positionY];
 
@@ -102,7 +83,7 @@ function checkValueInPosition(selectNumber, positionX, positionY) {
     }
 
     // Hard level: Level's gonna be checked after inputting every number
-    // Even though you input wrong number, it's still gonna input in the cell.
+    // Even though you input wrong number, it's still gonna input in the cell without warning.
   } else if (level === "hard") {
     return true;
   }
@@ -132,7 +113,7 @@ function checkForAnswer() {
     let position = $(this).prop("id").split("-");
     let positionX = position[0];
     let positionY = position[1];
-    let answer = levelObj[gameTypeAnswer][positionX][positionY]; // answer to be compared
+    let answer = levelObj[gameTypeAnswer][positionX][positionY];
 
     if (inputValue !== answer) {
       isCorrected = false;
